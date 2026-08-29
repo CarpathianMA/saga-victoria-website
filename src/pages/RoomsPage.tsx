@@ -6,6 +6,7 @@ import SagaRoomsIntro, { SagaRoomsCategoryIntro } from '../components/saga/SagaR
 import SagaRoomCard from '../components/saga/SagaRoomCard'
 import SagaRoomFilters from '../components/saga/SagaRoomFilters'
 import SagaRoomsOffers from '../components/saga/SagaRoomsOffers'
+import SagaRoomsVideo from '../components/saga/SagaRoomsVideo'
 import SagaStickyBook from '../components/saga/SagaStickyBook'
 import { useRoomHashOpen } from '../context/RoomModalContext'
 import {
@@ -39,6 +40,7 @@ export default function RoomsPage() {
       <SagaHeader />
       <SagaRoomsHero />
       <SagaRoomsIntro />
+      <SagaRoomsVideo />
 
       <section className="border-b border-black/5 bg-white py-8">
         <div className="container-hotel">
