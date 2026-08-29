@@ -12,25 +12,27 @@ interface SagaRoomCardGalleryProps {
 
 export default function SagaRoomCardGallery({ images, alt, onExpand }: SagaRoomCardGalleryProps) {
   const swiperRef = useRef<SwiperType | null>(null)
-  const paginationRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useState(0)
+  const paginationId = useRef(`room-gallery-${Math.random().toString(36).slice(2, 9)}`).current
 
   return (
     <div className="room-gallery relative aspect-[4/3] overflow-hidden bg-surface">
+      {images.length > 1 && (
+        <div
+          id={paginationId}
+          className="room-gallery-pagination absolute bottom-4 left-0 right-0 z-10 flex justify-center gap-2"
+        />
+      )}
+
       <Swiper
         modules={[Pagination]}
         onSwiper={(s) => { swiperRef.current = s }}
-        onBeforeInit={(swiper) => {
-          if (paginationRef.current) {
-            const pagination = swiper.params.pagination
-            if (pagination && typeof pagination !== 'boolean') {
-              pagination.el = paginationRef.current
-            }
-          }
-        }}
         onSlideChange={(s) => setActive(s.realIndex)}
         loop={images.length > 1}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          el: `#${paginationId}`,
+        }}
         className="h-full w-full"
       >
         {images.map((src, i) => (
@@ -39,6 +41,7 @@ export default function SagaRoomCardGallery({ images, alt, onExpand }: SagaRoomC
               src={src}
               alt={`${alt}${images.length > 1 ? `, imaginea ${i + 1}` : ''}`}
               className="h-full w-full object-cover"
+              loading={i === 0 ? 'eager' : 'lazy'}
             />
           </SwiperSlide>
         ))}
@@ -62,7 +65,6 @@ export default function SagaRoomCardGallery({ images, alt, onExpand }: SagaRoomC
           >
             <ChevronRightIcon className="h-4 w-4" />
           </button>
-          <div ref={paginationRef} className="room-gallery-pagination absolute bottom-4 left-0 right-0 z-10 flex justify-center gap-2" />
         </>
       )}
 
