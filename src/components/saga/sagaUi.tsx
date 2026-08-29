@@ -81,6 +81,8 @@ export function SagaImageSlider({
                 src={src}
                 alt={`${alt}${images.length > 1 ? `, imaginea ${i + 1}` : ''}`}
                 className="h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </SwiperSlide>
           ))}

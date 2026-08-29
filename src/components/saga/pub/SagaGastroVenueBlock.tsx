@@ -14,7 +14,7 @@ export default function SagaGastroVenueBlock({ venue, reverse = false }: SagaGas
         }`}
       >
         <div className="img-zoom aspect-[4/3] overflow-hidden bg-surface lg:aspect-[5/4]">
-          <img src={venue.image} alt={venue.title} className="h-full w-full object-cover" />
+          <img src={venue.image} alt={venue.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
         </div>
 
         <div>

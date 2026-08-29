@@ -9,6 +9,7 @@ export default function SagaPubHero() {
       <img
         src={PUB_HERO_IMAGE}
         alt=""
+        fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/45" />

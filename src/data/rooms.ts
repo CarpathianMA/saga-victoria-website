@@ -152,7 +152,3 @@ export const ROOMS: Room[] = [
 export function getRoomsByCategory(category: RoomCategory) {
   return ROOMS.filter((r) => r.category === category)
 }
-
-export function getRoomById(id: string) {
-  return ROOMS.find((r) => r.id === id)
-}

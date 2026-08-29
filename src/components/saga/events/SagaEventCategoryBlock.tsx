@@ -18,6 +18,8 @@ export default function SagaEventCategoryBlock({ category, reverse = false }: Sa
             src={category.image}
             alt={category.title}
             className="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 

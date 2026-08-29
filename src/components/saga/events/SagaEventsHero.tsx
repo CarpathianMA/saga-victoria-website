@@ -9,6 +9,7 @@ export default function SagaEventsHero() {
       <img
         src={SAGA_EVENTS_CURATED[0]}
         alt=""
+        fetchPriority="high"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/45" />

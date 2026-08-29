@@ -23,6 +23,8 @@ export default function SagaCarouselCard({ item }: SagaCarouselCardProps) {
           src={item.image}
           alt={item.title}
           className="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
         {item.eyebrow && (
           <span className="absolute left-4 top-4 bg-white/95 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-ink">

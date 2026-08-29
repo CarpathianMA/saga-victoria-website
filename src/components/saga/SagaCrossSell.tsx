@@ -8,7 +8,7 @@ export default function SagaCrossSell() {
       <div className="container-hotel">
         <div className="grid items-center gap-10 overflow-hidden border border-black/5 bg-page lg:grid-cols-2">
           <div className="img-zoom aspect-[16/10] overflow-hidden bg-surface lg:aspect-auto lg:min-h-[280px]">
-            <img src={SAGA_ROOMS_CURATED[2]} alt="Camere Saga Victoria" className="h-full w-full object-cover" />
+            <img src={SAGA_ROOMS_CURATED[2]} alt="Camere Saga Victoria" className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
           <div className="p-8 md:p-10">
             <p className="label-hotel">Cazare</p>

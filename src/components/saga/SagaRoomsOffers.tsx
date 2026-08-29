@@ -8,6 +8,8 @@ export default function SagaRoomsOffers() {
         src={SAGA_ROOMS_CURATED[0]}
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-black/50" />
       <div className="container-hotel relative flex min-h-[360px] flex-col items-center justify-center px-6 py-20 text-center md:min-h-[420px]">

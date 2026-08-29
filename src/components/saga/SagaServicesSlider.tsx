@@ -34,6 +34,8 @@ export default function SagaServicesSlider({
                   src={slide.image}
                   alt={slide.title}
                   className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80 transition group-hover:opacity-90" />
                 {slide.label && (

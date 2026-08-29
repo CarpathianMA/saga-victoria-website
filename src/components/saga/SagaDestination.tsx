@@ -13,6 +13,8 @@ export default function SagaDestination() {
               src={SAGA_PIZZERIE_VIEW}
               alt="Apus la Saga Victoria, priveliște spre Munții Făgăraș"
               className="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div>
@@ -43,7 +45,7 @@ export default function SagaDestination() {
         <div className="mt-16 grid grid-cols-3 gap-3 md:gap-4">
           {SAGA_DESTINATION_SCENERY.map((src, i) => (
             <div key={src} className="img-zoom aspect-[4/5] overflow-hidden bg-surface md:aspect-square">
-              <img src={src} alt={`Victoria & Saga ${i + 1}`} className="h-full w-full object-cover" />
+              <img src={src} alt={`Victoria & Saga ${i + 1}`} className="h-full w-full object-cover" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>
