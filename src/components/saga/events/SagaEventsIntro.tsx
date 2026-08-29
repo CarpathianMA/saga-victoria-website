@@ -13,20 +13,19 @@ export default function SagaEventsIntro() {
             </svg>
           </Link>
           <span aria-hidden className="text-black/20">›</span>
-          <span className="text-ink">Evenimente</span>
+          <span className="text-ink">Restaurant & Events</span>
         </nav>
       </div>
 
       <div className="section-hotel-compact bg-page">
         <div className="container-hotel mx-auto max-w-[780px] text-center">
           <p className="prose-hotel">
-            Unde planurile devin amintiri. La Saga Victoria, fiecare eveniment primește atmosfera
-            potrivită, fie că e vorba de o conferință care inspiră, de o nuntă la care invitații nu
-            vor uita niciodată sau de o petrecere în familie. Sală modernă, bucătărie à la carte
-            și camere pentru oaspeți, totul la poalele Munților Făgăraș.
+            Două experiențe distincte, aceeași grijă pentru detalii. Restaurantul à la carte oferă
+            mese rafinate, cu meniu divers și atmosferă elegantă. Sala de evenimente preia aceeași
+            bucătărie pentru nunți, corporate sau petreceri de familie, la poalele Munților Făgăraș.
           </p>
           <a href={`tel:+4${RESTAURANT_PHONE}`} className="btn-book mt-8 inline-flex">
-            Rezervă spațiul
+            Rezervă masă
           </a>
         </div>
       </div>

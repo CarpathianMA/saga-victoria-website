@@ -19,9 +19,15 @@ export default function SagaPubIntro() {
       <div className="section-hotel-compact bg-page">
         <div className="container-hotel mx-auto max-w-[780px] text-center">
           <p className="prose-hotel">
-            De la pizza proaspătă la seri liniștite pe terasă, gastronomia Saga aduce gusturi sincere,
+            De la pizza proaspătă la seri liniștite pe terasă, pub-ul Saga aduce gusturi sincere,
             atmosferă caldă și momente de împărtășit. La parterul complexului, totul e la îndemână:
             mâncare bună, băuturi alese și priveliște spre Munții Făgăraș.
+          </p>
+          <p className="mt-5 text-[14px] leading-relaxed text-muted">
+            Cauți o masă mai rafinată, à la carte?{' '}
+            <Link to="/evenimente" className="font-medium text-brand transition hover:opacity-80">
+              Vezi Restaurant & Events →
+            </Link>
           </p>
           <a href={`tel:+4${RESTAURANT_PHONE}`} className="btn-book mt-8 inline-flex">
             Rezervă masă

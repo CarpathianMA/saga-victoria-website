@@ -1,4 +1,48 @@
-import { SAGA_EVENTS, SAGA_EVENTS_CURATED, SAGA_MENU_FOOD } from './sagaAssets'
+import { SAGA, SAGA_EVENTS, SAGA_EVENTS_CURATED, SAGA_MENU_FOOD, SAGA_RESTAURANT_HERO } from './sagaAssets'
+import { RESTAURANT_PHONE } from './experiences'
+
+export interface RestaurantSection {
+  eyebrow: string
+  title: string
+  description: string
+  image: string
+  highlights: string[]
+  schedule: string[]
+  menuLabel?: string
+  menuHref?: string
+  ctaLabel: string
+  ctaHref: string
+}
+
+export const RESTAURANT_SECTION: RestaurantSection = {
+  eyebrow: 'Restaurant à la carte',
+  title: 'Gusturi care merită timp',
+  description:
+    'Separat de pub, restaurantul Saga Victoria propune o experiență mai rafinată: meniu divers à la carte, farfurii gândite cu grijă și o atmosferă elegantă, potrivită pentru prânzuri liniștite, cine în doi sau mese cu familia. Aceeași echipă și aceeași atenție la detaliu care definesc evenimentele noastre.',
+  image: SAGA_RESTAURANT_HERO,
+  highlights: [
+    'Meniu à la carte, divers și sezonier',
+    'Atmosferă elegantă, departe de agitația pub-ului',
+    'Prânz, cină și mese pentru grupuri mici',
+    'Acces direct din camerele Saga Victoria',
+  ],
+  schedule: [
+    'Luni până duminică · 12:00 - 22:00',
+    'Program orientativ. Sună pentru confirmare rezervare.',
+  ],
+  menuLabel: 'Meniu restaurant (PDF)',
+  menuHref: SAGA.menus.events,
+  ctaLabel: 'Rezervă masă',
+  ctaHref: `tel:+4${RESTAURANT_PHONE}`,
+}
+
+export const EVENTS_GALLERY = [
+  SAGA_RESTAURANT_HERO,
+  SAGA_EVENTS_CURATED[0],
+  SAGA_MENU_FOOD[3],
+  SAGA_EVENTS[4] ?? SAGA_EVENTS_CURATED[2],
+  SAGA_MENU_FOOD[5],
+]
 
 export const EVENTS_STATS = [
   { value: '1', label: 'Sală de evenimente', sub: 'Lumină caldă și aranjamente care impresionează' },

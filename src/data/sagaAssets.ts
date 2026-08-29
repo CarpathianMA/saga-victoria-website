@@ -38,6 +38,8 @@ export const SAGA_MENU_FOOD = Array.from({ length: 8 }, (_, i) =>
   r(`menu/mancare-${i + 1}.jpeg`),
 )
 
+export const SAGA_RESTAURANT_HERO = r('menu/mancare-restaurant-events.webp')
+
 export const SAGA_PUB_CURATED = [SAGA_CLADIRE_PUB, SAGA_PUB_INTERIOR, SAGA_TERASA_VIEW]
 
 export const SAGA_EVENTS_CURATED = [
